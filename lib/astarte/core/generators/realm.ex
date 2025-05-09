@@ -33,7 +33,7 @@ defmodule Astarte.Core.Generators.Realm do
   def realm_name do
     gen all(
           first <- string([?a..?z], length: 1),
-          rest <- string([?a..?z, ?0..?9], length: 0..47)
+          rest <- string([?a..?z, ?0..?9], length: 1..47)
         ) do
       first <> rest
     end
